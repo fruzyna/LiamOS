@@ -24,6 +24,12 @@ cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 # Copy bazaar service file
 cp /ctx/oci/common/bluefin/usr/lib/systemd/user/bazaar.service /usr/lib/systemd/user
 
+# Copy udev rules
+cp /ctx/oci/common/shared/usr/lib/udev/rules.d/* /usr/lib/udev/rules.d
+
+# Copy color profiles
+cp /ctx/oci/common/shared/usr/share/color/icc/colord/* /usr/share/color/icc/colord
+
 echo "::endgroup::"
 
 # Manually run build scripts in order, this allegedly happens automatically, but I haven't seen that
