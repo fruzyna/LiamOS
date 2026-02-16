@@ -24,8 +24,8 @@ cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 # Copy bazaar service file
 cp /ctx/oci/common/bluefin/usr/lib/systemd/user/bazaar.service /usr/lib/systemd/user
 
-# Copy udev rules
-cp /ctx/oci/common/shared/usr/lib/udev/rules.d/* /usr/lib/udev/rules.d
+# Copy udev rules - these and more seem to come with ublue-os/silverblue-main
+#cp /ctx/oci/common/shared/usr/lib/udev/rules.d/* /usr/lib/udev/rules.d
 
 # Copy color profiles
 cp /ctx/oci/common/shared/usr/share/color/icc/colord/* /usr/share/color/icc/colord
