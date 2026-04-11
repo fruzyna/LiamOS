@@ -23,6 +23,7 @@ FEDORA_PACKAGES=(
     gnome-shell-extension-drive-menu
     gnome-shell-extension-launch-new-instance
     gnome-tweaks
+    goaccess
     iwd
     keepassxc
     lm_sensors
