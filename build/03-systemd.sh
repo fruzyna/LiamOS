@@ -9,9 +9,8 @@ systemctl --global enable bazaar.service
 
 systemctl enable podman.socket
 
-# replace Fedora update timers with UUPD
-systemctl enable uupd.timer
+# replace Fedora update timer with mine
+systemctl enable update-system.timer
 systemctl disable rpm-ostreed-automatic.timer
-systemctl disable flatpak-system-update.timer
 
 echo "::endgroup::"

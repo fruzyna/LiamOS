@@ -1,0 +1,8 @@
+[Unit]
+Description=Check for uboot updates
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=bootc upgrade --quiet
