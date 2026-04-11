@@ -16,7 +16,6 @@ COPY build /build
 COPY custom /custom
 
 # Copy from OCI containers to distinct subdirectories to avoid conflicts
-COPY --from=ghcr.io/projectbluefin/common:latest /system_files /oci/common
 COPY --from=ghcr.io/ublue-os/akmods:${KERNEL_BRANCH}-${FEDORA_VERSION} / /akmods/common
 COPY --from=ghcr.io/ublue-os/akmods-nvidia-open:${KERNEL_BRANCH}-${FEDORA_VERSION} / /akmods/nvidia
 

@@ -21,17 +21,12 @@ find /ctx/custom/ujust -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >>
 mkdir -p /etc/flatpak/preinstall.d/
 cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 
-# Copy bazaar service file
-cp /ctx/oci/common/bluefin/usr/lib/systemd/user/bazaar.service /usr/lib/systemd/user
-
 # Copy systemd files
-cp /ctx/custom/systemd/* /etc/systemd/system
+cp /ctx/custom/systemd/* /usr/lib/systemd/system
+cp /ctx/custom/systemd-user/* /usr/lib/systemd/user
 
-# Copy udev rules - these and more seem to come with ublue-os/silverblue-main
-#cp /ctx/oci/common/shared/usr/lib/udev/rules.d/* /usr/lib/udev/rules.d
-
-# Copy color profiles
-cp /ctx/oci/common/shared/usr/share/color/icc/colord/* /usr/share/color/icc/colord
+# Copy framework configs
+cp /ctx/custom/framework/*.icc /usr/share/color/icc/colord
 
 echo "::endgroup::"
 
