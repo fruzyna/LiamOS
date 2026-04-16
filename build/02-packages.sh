@@ -31,6 +31,7 @@ FEDORA_PACKAGES=(
     podman-compose
     steam-devices
     waypipe
+    winetricks
 )
 
 dnf -y install "${FEDORA_PACKAGES[@]}"
