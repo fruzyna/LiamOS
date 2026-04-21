@@ -29,6 +29,7 @@ FEDORA_PACKAGES=(
     lm_sensors
     lsb_release
     podman-compose
+    python3-notebook
     steam-devices
     waypipe
     winetricks
