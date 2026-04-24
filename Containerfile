@@ -4,13 +4,15 @@
 # Name: liamos
 ###############################################################################
 
+# ARGs used in FROMs must be defined at the top of the file
+ARG FEDORA_VERSION="43"
+
 # Context stage - combine local and imported OCI container resources
 FROM scratch AS ctx
 
-# ARG is limited to the current build stage which is defined by FROM
-ARG FEDORA_VERSION="43"
+# ARG is limited to the current build stage which is defined by FROM, must be redeclared
+ARG FEDORA_VERSION
 ARG KERNEL_BRANCH="main"
-ENV LIAMOS_KERNEL_BRANCH=${KERNEL_BRANCH}
 
 COPY build /build
 COPY custom /custom
@@ -20,10 +22,10 @@ COPY --from=ghcr.io/ublue-os/akmods:${KERNEL_BRANCH}-${FEDORA_VERSION} / /akmods
 COPY --from=ghcr.io/ublue-os/akmods-nvidia-open:${KERNEL_BRANCH}-${FEDORA_VERSION} / /akmods/nvidia
 
 # Base Image - GNOME included
-FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM ghcr.io/ublue-os/silverblue-main:${FEDORA_VERSION}
 
 # KERNEL_BRANCH build-arg is accessible during build as LIAMOS_KERNEL_BRANCH
-ARG KERNEL_BRANCH="main"
+ARG KERNEL_BRANCH
 ENV LIAMOS_KERNEL_BRANCH=${KERNEL_BRANCH}
 
 # IMAGE_NAME build-arg is accessible during build as LIAMOS_IMAGE_NAME
