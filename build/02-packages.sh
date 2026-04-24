@@ -94,6 +94,8 @@ mkdir -p /tmp/FirstDriverStation
 curl -L $DS_URL | tar -xzC /tmp/FirstDriverStation
 mv /tmp/FirstDriverStation/FirstDriverStation /usr/bin
 mv /tmp/FirstDriverStation/*.so /usr/lib64
+chgrp input /usr/bin/FirstDriverStation
+chmod g+s /usr/bin/FirstDriverStation
 
 #
 # Remove packages pre-installed from Fedora repos
