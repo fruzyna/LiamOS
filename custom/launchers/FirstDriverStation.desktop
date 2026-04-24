@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=FIRST Driver Station
+Exec=/usr/bin/FirstDriverStation
+Comment=Robot control application for FIRST Robotics Competition and FIRST Tech Challenge.
+Terminal=False

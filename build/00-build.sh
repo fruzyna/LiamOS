@@ -28,6 +28,9 @@ cp /ctx/custom/systemd-user/* /usr/lib/systemd/user
 # Copy framework configs
 cp /ctx/custom/framework/*.icc /usr/share/color/icc/colord
 
+# Copy desktop launchers
+cp /ctx/custom/launchers/*.desktop /usr/share/applications
+
 echo "::endgroup::"
 
 # Manually run build scripts in order, this allegedly happens automatically, but I haven't seen that

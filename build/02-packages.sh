@@ -85,6 +85,17 @@ dnf -y install --enablerepo=code code
 rm -f /etc/yum.repos.d/vscode.repo
 
 #
+# Install FIRST Driver Station
+#
+
+# TODO: find a way to fetch the latest release automatically
+DS_URL="https://github.com/wpilibsuite/FirstDriverStation-Public/releases/download/v2027.0.0-alpha-1/FirstDriverStation-linux-x64-2027.0.0-alpha-1.tar.gz"
+mkdir -p /tmp/FirstDriverStation
+curl -L $DS_URL | tar -xzC /tmp/FirstDriverStation
+mv /tmp/FirstDriverStation/FirstDriverStation /usr/bin
+mv /tmp/FirstDriverStation/*.so /usr/lib64
+
+#
 # Remove packages pre-installed from Fedora repos
 #
 
