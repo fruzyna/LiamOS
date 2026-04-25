@@ -12,7 +12,7 @@ sudo systemctl reboot
 ## Local Development
 
 ```bash
-just build liamos local
+sudo just build liamos local
 sudo bootc switch --transport containers-storage localhost/liamos:local
 sudo systemctl reboot
 ```

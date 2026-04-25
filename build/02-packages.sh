@@ -88,12 +88,15 @@ rm -f /etc/yum.repos.d/vscode.repo
 # Install FIRST Driver Station
 #
 
-# TODO: find a way to fetch the latest release automatically
-DS_URL="https://github.com/wpilibsuite/FirstDriverStation-Public/releases/download/v2027.0.0-alpha-1/FirstDriverStation-linux-x64-2027.0.0-alpha-1.tar.gz"
+echo "::endgroup::"
+echo "::group:: Install FIRST Driver Station"
+
+python /ctx/build/get-fds.py
 mkdir -p /tmp/FirstDriverStation
-curl -L $DS_URL | tar -xzC /tmp/FirstDriverStation
+tar -xzf /tmp/FirstDriverStation.tar.gz -C /tmp/FirstDriverStation
 mv /tmp/FirstDriverStation/FirstDriverStation /usr/bin
 mv /tmp/FirstDriverStation/*.so /usr/lib64
+curl -o /usr/share/pixmaps/wpilib.png https://avatars.githubusercontent.com/u/19267233
 chgrp input /usr/bin/FirstDriverStation
 chmod g+s /usr/bin/FirstDriverStation
 
