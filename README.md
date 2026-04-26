@@ -16,3 +16,8 @@ sudo just build liamos local
 sudo bootc switch --transport containers-storage localhost/liamos:local
 sudo systemctl reboot
 ```
+
+## Notes
+
+- [Add user to groups](https://docs.fedoraproject.org/en-US/atomic-desktops/troubleshooting/#_unable_to_add_user_to_group)
+- `podman login ghcr.io --authfile ~/.docker/config.json`
