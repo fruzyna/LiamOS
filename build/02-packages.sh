@@ -8,6 +8,7 @@ echo "::group:: Install packages"
 #
 # Install packages from Fedora repos
 #
+
 echo "::group:: Install from Fedora repos"
 
 FEDORA_PACKAGES=(
@@ -39,9 +40,6 @@ dnf -y install "${FEDORA_PACKAGES[@]}"
 
 echo "::endgroup::"
 echo "::group:: Install from copr repos"
-
-# Source helper functions
-source /ctx/build/copr-helpers.sh
 
 #
 # Install fwupd with ublue ID fix
