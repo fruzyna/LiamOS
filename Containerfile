@@ -5,7 +5,7 @@
 ###############################################################################
 
 # ARGs used in FROMs must be defined at the top of the file
-ARG FEDORA_VERSION="43"
+ARG FEDORA_VERSION="44"
 
 # Context stage - combine local and imported OCI container resources
 FROM scratch AS ctx

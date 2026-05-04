@@ -49,18 +49,6 @@ dnf -y copr disable ublue-os/staging
 dnf -y swap --repo=copr:copr.fedorainfracloud.org:ublue-os:staging fwupd fwupd
 
 #
-# Install latest Flatpak to get preinstall command
-#
-
-dnf -y copr enable ublue-os/flatpak-test
-dnf -y copr disable ublue-os/flatpak-test
-dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak flatpak
-dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-libs flatpak-libs
-dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-session-helper flatpak-session-helper
-# print information about flatpak package, it should say from our copr
-rpm -q flatpak --qf "%{NAME} %{VENDOR}\n" | grep ublue-os
-
-#
 # Install VS Code from MS repo
 #
 
@@ -125,9 +113,9 @@ dnf -y remove "${REMOVE_PACKAGES[@]}"
 echo "::endgroup::"
 echo "::group:: Configure Mutter"
 
-MUTTER_EXP_FEATS="'scale-monitor-framebuffer', 'xwayland-native-scaling'"
+MUTTER_EXP_FEATS=""
 if [[ "$LIAMOS_IMAGE_NAME" =~ "nvidia" ]]; then
-    MUTTER_EXP_FEATS="'kms-modifiers', ${MUTTER_EXP_FEATS}"
+    MUTTER_EXP_FEATS="'kms-modifiers'"
 fi
 tee /usr/share/glib-2.0/schemas/zz1-bluefin-modifications-mutter-exp-feats.gschema.override << EOF
 [org.gnome.mutter]
