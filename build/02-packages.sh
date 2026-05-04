@@ -33,7 +33,6 @@ FEDORA_PACKAGES=(
     python3-notebook
     steam-devices
     waypipe
-    winetricks
 )
 
 dnf -y install "${FEDORA_PACKAGES[@]}"
