@@ -2,13 +2,13 @@
 from requests import get
 from urllib.request import urlretrieve
 
-RELEASES_URL = 'https://github.com/wpilibsuite/FirstDriverStation-Public/releases'
-DOWNLOAD_PATH = '/tmp/FirstDriverStation.tar.gz'
+RELEASES_URL = 'https://github.com/FrameworkComputer/framework-system/releases'
+DOWNLOAD_PATH = '/tmp/framework_tool'
 
 res = get(f'{RELEASES_URL}/latest')
 if res.status_code == 200:
-    version = res.url.split('/')[-1][1:]
-    download_url = f'{RELEASES_URL}/download/v{version}/FirstDriverStation-linux-x64-{version}.tar.gz'
+    version = res.url.split('/')[-1]
+    download_url = f'{RELEASES_URL}/download/{version}/framework_tool'
 
     print('Downloading:', download_url, 'to', DOWNLOAD_PATH)
     urlretrieve(download_url, DOWNLOAD_PATH)

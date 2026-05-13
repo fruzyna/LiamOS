@@ -86,6 +86,17 @@ chgrp input /usr/bin/FirstDriverStation
 chmod g+s /usr/bin/FirstDriverStation
 
 #
+# Install framework_tool
+#
+
+echo "::endgroup::"
+echo "::group:: Install framework_tool"
+
+python /ctx/build/get-fwt.py
+mv /tmp/framework_tool /usr/bin
+chmod +x /usr/bin/framework_tool
+
+#
 # Remove packages pre-installed from Fedora repos
 #
 
