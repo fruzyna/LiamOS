@@ -111,6 +111,8 @@ REMOVE_PACKAGES=(
     gnome-shell-extension-background-logo
     gnome-software
     gnome-software-rpm-ostree
+    gnome-tour
+    inkscape
     podman-docker
     yelp
 )
