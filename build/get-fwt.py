@@ -1,4 +1,4 @@
-# Determine the latest available FIRST Driver Station release, then download the corresponding build
+# Determine the latest available framework_tool release, then download the corresponding build
 from requests import get
 from urllib.request import urlretrieve
 
