@@ -13,7 +13,7 @@ setup-keys:
 
 setup-dotfiles:
     git clone ssh://git@github.com/fruzyna/dotfiles ~/.dotfiles
-    cd ~/.dotfiles && ./setup.sh
+    cd ~/.dotfiles && ./setup.sh && dconf load / < gnome-dconf.ini
 
 setup-all:
     ujust install-flatpaks
