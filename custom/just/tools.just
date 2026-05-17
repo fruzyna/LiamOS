@@ -16,7 +16,7 @@ mount $share $local_ip="192.168.16.13" $vpn_ip="192.168.8.1" $user="liam":
         sudo mount -t cifs -o username=$user,uid=1000,gid=1000 //$ip/$share /mnt/$share
 
         # make a copy of my KeePass db for offline access
-        if [[ "$user" == "liam" ]]; then
+        if [[ "$share" == "liam" ]]; then
             cp /mnt/liam/Passwords.kdbx ~/Passwords-LOCAL.kdbx
         fi
     else
