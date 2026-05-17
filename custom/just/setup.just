@@ -15,7 +15,13 @@ setup-dotfiles:
     git clone ssh://git@github.com/fruzyna/dotfiles ~/.dotfiles
     cd ~/.dotfiles && ./setup.sh && dconf load / < gnome-dconf.ini
 
+setup-home:
+    mkdir ~/Projects
+    rmdir ~/{Desktop,Music,Public,Templates}
+    cp /mnt/crypt/keys/keepass ~
+
 setup-all:
     ujust install-flatpaks
     ujust setup-keys
     ujust setup-dotfiles
+    ujust setup-home
