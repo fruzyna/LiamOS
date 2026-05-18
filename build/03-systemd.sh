@@ -13,4 +13,6 @@ systemctl enable podman.socket
 systemctl enable update-system.timer
 systemctl disable rpm-ostreed-automatic.timer
 
+systemctl enable enable-fingerprint.service
+
 echo "::endgroup::"

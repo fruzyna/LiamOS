@@ -21,6 +21,9 @@ find /ctx/custom/just -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >> 
 mkdir -p /etc/flatpak/preinstall.d/
 cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
 
+# Copy scripts
+cp /ctx/custom/scripts/* /usr/bin
+
 # Copy systemd files
 cp /ctx/custom/systemd/* /usr/lib/systemd/system
 cp /ctx/custom/systemd-user/* /usr/lib/systemd/user

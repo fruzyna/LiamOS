@@ -1,0 +1,10 @@
+[Unit]
+Description=Attempt to enable the fingerprint reader
+After=graphical.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/enable-fingerprint.sh
+
+[Install]
+WantedBy=graphical.target
