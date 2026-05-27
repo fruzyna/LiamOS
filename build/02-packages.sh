@@ -29,6 +29,8 @@ FEDORA_PACKAGES=(
     keepassxc
     lm_sensors
     lsb_release
+    opencv-core
+    opencv-devel
     podman-compose
     python3-notebook
     steam-devices
