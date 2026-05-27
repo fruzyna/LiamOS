@@ -26,6 +26,10 @@ IsRuntime=false
 Branch=stable
 IsRuntime=false
 
+[Flatpak Preinstall org.raspberrypi.rpi-imager]
+Branch=stable
+IsRuntime=false
+
 [Flatpak Preinstall org.videolan.VLC]
 Branch=stable
 IsRuntime=false
