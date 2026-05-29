@@ -29,6 +29,7 @@ FEDORA_PACKAGES=(
     keepassxc
     lm_sensors
     lsb_release
+    mtr
     opencv-core
     opencv-devel
     podman-compose
