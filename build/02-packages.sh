@@ -34,6 +34,7 @@ FEDORA_PACKAGES=(
     opencv-devel
     podman-compose
     python3-notebook
+    screen
     steam-devices
     waypipe
 )
