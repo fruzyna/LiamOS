@@ -26,6 +26,7 @@ FEDORA_PACKAGES=(
     gnome-tweaks
     goaccess
     iwd
+    jack-audio-connection-kit
     keepassxc
     lm_sensors
     lsb_release
@@ -34,6 +35,7 @@ FEDORA_PACKAGES=(
     opencv-devel
     podman-compose
     python3-notebook
+    qjackctl
     screen
     steam-devices
     waypipe
