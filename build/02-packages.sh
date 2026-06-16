@@ -17,6 +17,7 @@ FEDORA_PACKAGES=(
     dhcp-server
     firefox
     fish
+    fwupd
     git-lfs
     git-credential-libsecret
     gnome-boxes
@@ -42,17 +43,6 @@ FEDORA_PACKAGES=(
 )
 
 dnf -y install "${FEDORA_PACKAGES[@]}"
-
-echo "::endgroup::"
-echo "::group:: Install from copr repos"
-
-#
-# Install fwupd with ublue ID fix
-#
-
-dnf -y copr enable ublue-os/staging
-dnf -y copr disable ublue-os/staging
-dnf -y swap --repo=copr:copr.fedorainfracloud.org:ublue-os:staging fwupd fwupd
 
 #
 # Install VS Code from MS repo
