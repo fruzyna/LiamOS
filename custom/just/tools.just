@@ -1,4 +1,4 @@
-mount $share $local_ip="192.168.16.13" $vpn_ip="192.168.8.1" $user="liam":
+mount $share $local_ip="192.168.16.21" $vpn_ip="192.168.8.6" $user="liam":
     #!/bin/bash
 
     # determine which IP the server is available at
