@@ -20,7 +20,6 @@ FEDORA_PACKAGES=(
     fwupd
     git-lfs
     git-credential-libsecret
-    gnome-boxes
     gnome-shell-extension-appindicator
     gnome-shell-extension-drive-menu
     gnome-shell-extension-launch-new-instance
@@ -122,6 +121,7 @@ dnf -y remove "${REMOVE_PACKAGES[@]}"
 echo "::endgroup::"
 echo "::group:: Configure Mutter"
 
+# TODO: determine if any of this is necessary
 MUTTER_EXP_FEATS=""
 if [[ "$LIAMOS_IMAGE_NAME" =~ "nvidia" ]]; then
     MUTTER_EXP_FEATS="'kms-modifiers'"
