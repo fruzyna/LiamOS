@@ -34,6 +34,9 @@ cp /ctx/custom/framework/*.icc /usr/share/color/icc/colord
 # Copy desktop launchers
 cp /ctx/custom/launchers/*.desktop /usr/share/applications
 
+# Copy custom modprobe configs
+cp /ctx/custom/modprobe/*.conf /usr/lib/modprobe.d
+
 echo "::endgroup::"
 
 # Manually run build scripts in order, this allegedly happens automatically, but I haven't seen that
