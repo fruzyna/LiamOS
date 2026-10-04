@@ -29,7 +29,6 @@ echo "::group:: Install kernel modules"
 # Install common akmods
 dnf5 -y install \
     /ctx/akmods/common/rpms/ublue-os/ublue-os-akmods*.rpm \
-    /ctx/akmods/common/rpms/kmods/kmod-framework-laptop*.rpm \
     /ctx/akmods/common/rpms/kmods/kmod-xone*.rpm
 
 # Install v4l2loopback akmod
