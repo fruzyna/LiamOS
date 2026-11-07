@@ -38,6 +38,7 @@ FEDORA_PACKAGES=(
     qjackctl
     screen
     steam-devices
+    tbtools
     waypipe
 )
 
